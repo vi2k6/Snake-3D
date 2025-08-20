@@ -1,9 +1,9 @@
-name: Deploy Snake 3D to GitHub Pages
+name: Deploy to GitHub Pages
 
 on:
   push:
     branches:
-      - main  # 👈 or 'master' if your default branch is master
+      - main   # 👈 change to "master" if your repo uses master
 
 jobs:
   build:
@@ -12,11 +12,10 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Setup Node.js
+      - name: Setup Node
         uses: actions/setup-node@v3
         with:
           node-version: 18
-          cache: npm
 
       - name: Install dependencies
         run: npm install
