@@ -1,1 +1,1 @@
-# Snake-3D
+Snake 3D complete package. Run npm install, npm run dev. Deploy to Netlify with build:npm run build, publish:dist.
