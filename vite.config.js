@@ -1,8 +1,11 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// ✅ IMPORTANT: Set base to your repo name for GitHub Pages
+// Detect environment (GitHub Pages vs Netlify vs Local)
+const repoName = 'Snake-3D'
+const isGithub = process.env.GITHUB_ACTIONS === 'true'
+
 export default defineConfig({
   plugins: [react()],
-  base: '/Snake-3D/', 
+  base: isGithub ? `/${repoName}/` : '/', 
 })
